@@ -14,5 +14,11 @@ android-Required Interview Outline 欢迎Star，follow
 
 多态是：同一个类型的不同对象，对于同一个行为，具有多个不同表现形式，消除同一类型之间的耦合关系，使得对象具备多种表现形式。
 
+# 基本类型
+整数类型，浮点类型，字符类型，布尔类型，byte 1,short 2,int 4,long 8   floa 4t,double 8   char 2,boolean /
 
+封装类：Byte , Short , Integer , Long , Float , Double , Char , Boolean
 
+>Java的数据类型主要分为：基本数据类型，枚举类型和引用数据类型
+
+未完待续！！！
