@@ -50,6 +50,44 @@ android-Required Interview Outline 欢迎Star，follow
 
 依照这个方法，两两比较，大的都被排到了最后，那么一旦排完，是不是都依照从小到大，（从低到高）的顺序在你面前排好了。
 ```
+//第一轮
+for(int index=0;index < arr.length-1; index++）{
+//相邻两个比较
+ if(arr[index] > arr[index+1]){
+   int temp = arr[index];
+   arr[index] = arr[index+1];
+   arr[index+1] = temp;
+ }
+}
+
+print(arr);
+
+for(int index=0;index < arr.length-2;index++){
+//这里arr.length-2,为什么比上一次多减了1呢？
+//因为第一轮，把最大的排出来了，就不用比较了，少了一个人
+ if(arr[index] > arr[index+1]){
+   int temp = arr[index];
+   arr[index] = arr[index+1];
+   arr[index+1] = temp;
+ }
+}
+
+print(arr);
+
+for(int index=0;index < arr.length-3;index++){
+ if(arr[index]>arr[index+1]){
+   int temp = arr[index];
+   arr[index] = arr[index+1];
+   arr[index+1] = temp;
+ }
+}
+
+print(arr);
+```
+
+### 优化
+
+```
 for(int num=1;num<arr.length;num++){
 
  for(int index=0;index<arr.length-num;index++){
