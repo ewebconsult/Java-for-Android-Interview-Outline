@@ -101,4 +101,27 @@ for(int num=1;num<arr.length;num++){
 }
 ```
 
+## 重点Android
+
+首先你得学习通信技术，大部分都要和后台接口交互，通信技术有okhttp ，解析后台数据有fastjson，流行的通信技术，其次就是界面UI，Android灵活就在界面，界面的功能有很多，之前简书或则掘金上面的第三方界面，就是人家自己写好的自定义View，技术成熟时，你也可以开发自定义View。
+
+### 交互数据的一个通信技术，okhttp
+
+这个交互会用到你跟数据库联系，或则从网上下载数据
+
+比平常用http通信简单很多
+
+比如后台数据库有用户数据和信息，你要把数据获取下来放在你的界面上，就必须通过http请求下载并解析数据
+
+第三方库，你只要下载到你源代码lib中引用一下，就可以用这些特效控件了
+
+http://www.jianshu.com/p/658b56bec80f 
+
+EventBus(事件处理)，xUtils(网络，图片，ORM)
+
+下载百度地图  baidumapapi.jar和libBMapApiEngine.so放libs/armeabi
+http://dev.baidu.com/wiki/static/imap/files/BaiduMapApi Lib Android 1.0.zip
+申请API Key
+地址: http://dev.baidu.com/wiki/static/impap/key
+
 未完待续！！！
