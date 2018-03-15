@@ -1,5 +1,9 @@
 # Java for Android
 android-Required Interview Outline 欢迎Star，follow
+# 操作系统
+
+管理和控制计算机硬件与软件资源的计算机程序，是直接运行在“裸机”上的最基本的系统软件，任何其他软件都必须在操作系统的支持下才能运行。
+
 # 继承，封装，多态
 
 ## 什么是继承
