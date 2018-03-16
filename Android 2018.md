@@ -1,3 +1,5 @@
+## 不顺
+
 ## 1.Activity的启动过程（不要回答生命周期） 
 http://blog.csdn.net/luoshengyang/article/details/6689748
 
