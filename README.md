@@ -1,6 +1,21 @@
 # Java for Android
 android-Required Interview Outline 欢迎Star，follow
 ```
+public class UDPClient{
+ public static void main(String[] args){
+  try{
+   DatagramSocket socket = new DatagramSocket(4567);
+   InetAddress serverAddress = InetAddress.getByName("1..3.3.");
+   String str = "hell";
+   byte data[] = str.getBytes();
+   DatagramPacket packet = new DatagramPacket(data,data.length,serverAddress,4567);
+   socket.send(packet);
+   }catch(Exception e){
+   e.printStackTrace();
+   }
+}
+```
+```
 public class SocketActivity extends Activity{
 	private Button startButton = null;
 
