@@ -1,5 +1,49 @@
 # Java for Android
 android-Required Interview Outline 欢迎Star，follow
+
+# 三大循环之for循环:
+语法:
+```
+for(初始化语句;boolean表达式;循环之后的操作语句)
+{
+   循环体
+}
+```
+
+初始化语句:定义变量,赋初始值;
+boolean表达式:判断条件,若条件为true,则进入循环体,若为false,则跳过循环.
+循环之后的操作语句: 变量的自增/自减操作.
+
+执行顺序:
+      1):初始化语句.
+      2):boolean表达式:
+           true: GOTO 3
+           false:跳过循环,不执行循环体
+      3):执行循环体.
+      4):循环之后的操作语句, GOTO 2.
+
+# 三大循环之while循环:
+```
+语法:
+while(boolean表达式)
+{
+     若boolean表达式结果为true,则执行这里.循环体
+}
+```
+注意:先判断boolean表达式.
+
+# 三大循环之do while循环:
+语法:
+```
+do
+{
+   循环体
+}while(boolean表达式);
+```
+注意: do while,不管boolean表达式对与错,先执行一次循环体.
+     即使boolean表达式为false,do while也会执行一次.
+     推论: 无论条件如何,dowhile至少会执行一次.
+
 # 顺序结构:
 如果代码里没有流程控制，程序是按照书写的格式从上而下一行一行执行的，
 一条语句执行完之后继续执行下一条语句，中间没有判断和跳转，直到程序的结束
