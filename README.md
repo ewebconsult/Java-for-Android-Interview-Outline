@@ -1,6 +1,43 @@
 # Java for Android
 android-Required Interview Outline 欢迎Star，follow
 ```
+public class SocketActivity extends Activity{
+	private Button startButton = null;
+
+	public void onCreate(Bundle savedInstanceState){
+	 super.onCreate(savedInstanceState);
+	 setContentView(R.layout.main);
+	 startButton = (Button)findViewById(R.id.startListener);
+	 startButton.setOnClickListener(new StartSocketListener());
+	}
+
+	classs StrartSocketListener implementns OnClickListener{
+	 public void onClick(View v){
+	   new ServerThread().start();
+	 }
+	}
+
+	class ServerThread extends Thread{
+	public void run(){
+	 try{
+	 
+	  DatagramSocket socket = new DatagramSocket(4567);
+	  
+	  byte data[] = new byte[1024];
+	  
+	  DatagramPacket packet = new DatagramPacket(data,data.length);
+	  
+	  socket.receive(packet);
+	  
+	  System.out.println(packet.getLength());
+	  
+	  }catch(Exception e){
+	   e.printStackTrace();
+	   }
+	   }
+}
+```
+```
 public class TCPClient{
  public static void main(String[] args){
   try{
