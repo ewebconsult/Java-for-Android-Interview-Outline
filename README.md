@@ -1,5 +1,30 @@
 # Java for Android
 android-Required Interview Outline 欢迎Star，follow
+								
+# Java自带数组工具类Arrays		
+
+既然常用的功能,大家都会使用到,所以SUN公司的科学家们把数组的操作方法,已经封装到Arrays类中.
+------------------------------------------------------------
+Arrays类:在java.util包中.
+-------------------------------------------------------------
+int binarySearch(type[] arr,type key)	使用二分法查找数组里某元素并返回其索引，若找不到返回负数.
+
+void sort(type[] arr)	使用调优后的快速法对指定数组排序。
+
+String toString(type[] arr)	返回指定数组内容的字符串表示形式。
+
+public static type[] copyOf(type[] original, int newLength)	复制指定的数组，截取或用 0 填充（如有必要），以使副本具有指定的长度。
+
+
+# 排序的分类：
+
+选择排序（直接选择排序、堆排序）
+
+交换排序(冒泡排序、快速排序)
+
+插入排序（直接插入排序、二分法插入排序、Shell排序）
+
+归并排序等。
 
 # 方法的可变参数:
      传统的做法,在方法调用的时候, 传递一个数组:
