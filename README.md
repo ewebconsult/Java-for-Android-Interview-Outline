@@ -1,6 +1,25 @@
 # Java for Android
 android-Required Interview Outline 欢迎Star，follow
 ```
+public class TCPClient{
+ public static void main(String[] args){
+  try{
+   Socket socket = new Socket("192.1683.1.1",4567);
+   InputStream inputStream = new FileIputStream("C:/text.txt");
+   OutputStream outputStream = socket.getOutputStream();
+   byte buffer[] = new byte[1024*4];
+   int temp = 0;
+   while( (temp = inputStream.read(buffer)) != -1 ){
+    outputStream.write(buffer,0,temp);
+    }
+    outputStream.flush();
+    }catch(Exception e){
+    e.printStackTrace();
+    }
+   }
+}
+```
+```
 public class SocketActivity extends Activity{
 	private Button startButton = null;
 
