@@ -1,6 +1,51 @@
 # Java for Android
 android-Required Interview Outline 欢迎Star，follow
+```
+public class SocketActivity extends Activity{
+	private Button startButton = null;
 
+	public void onCreate(Bundle savedInstanceState){
+	 super.onCreate(savedInstanceState);
+	 setContentView(R.layout.main);
+	 startButton = (Button)findViewById(R.id.startListener);
+	 startButton.setOnClickListener(new StartSocketListener());
+	}
+
+	classs StrartSocketListener implementns OnClickListener{
+	 public void onClick(View v){
+	   new ServerThread().start();
+	 }
+	}
+
+	class ServerThread extends Thread{
+	 public void run(){
+	 //声明一个ServerSocket对象
+	  ServerSocket serverSocket = null;
+	  try{
+	  //创建一个ServerSocket对象，并让这个Socket在4567端口监听
+	   serverSocket = new ServerSocket(4567);
+	   Socket socket = serverSocket.accept();
+
+	   InputStream inputStream = socket.getInputStream();
+	   byte[] buffer = new byte[1024*4];
+	   int temp = 0;
+	   while( (temp = inputStream.read(buffer)) != -1 ){
+	    System.out.println(new String(buffer, 0, temp));
+	   }
+	  }catch(IOException e){
+	   e.printStackTrace();
+	  }
+	  finally{
+	   try{
+	    serverSocket.close();
+	   }catch(IOException e){
+        e.printStackTrace();
+	   }
+	  }
+	 }
+	}
+}
+```
 # 局部变量的初始化和在JVM中的运行机制:
 局部变量定义后，必须显示初始化后才能使用，因为系统不会为局部变量执行初始化操作。
 这就意味着，定义局部变量后，系统并未为这个变量分配内存空间。
