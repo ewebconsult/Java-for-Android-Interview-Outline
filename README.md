@@ -1,5 +1,27 @@
 # Java for Android
 android-Required Interview Outline 欢迎Star，follow
+
+封装思想,提倡尽可能的隐藏信息.
+   1):一般的,把字段使用private修饰.
+   2):把某一个功能方法使用private修饰.
+-------------------------------------------
+
+当把字段name使用private修饰起来之后,在其他类中就再也访问不到name变量了.
+但是,外界肯定必须访问,怎么办呢?
+
+name字段所在的类需要对外暴露name字段的操作方法.
+
+  1):取出字段的值/getter方法:
+     public 字段类型 get字段名()
+     {
+          return 字段名;
+     }
+  2):给字段设置值/setter方法:
+     public void set字段名(字段类型 变量)
+     {
+          字段 = 变量;
+     }
+
 # 什么是封装？
 
 ①　把对象的状态和行为看成一个统一的整体，将二者存放在一个独立的模块中(类);
