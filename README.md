@@ -1,6 +1,22 @@
 # Java for Android
 android-Required Interview Outline 欢迎Star，follow
 
+Object的常用方法:
+
+protected  void finalize():该方法其实就是垃圾回收器,回收该对象时,调用的方法.
+                           大师的建议:该方法,永远不要动它.
+			   
+public boolean equals(Object obj):判断当前对象(this)和obj对象是否相等.
+                           该方法,默认和"=="等价,默认情况下,比较的是内存地址.
+                           而开发中,我们往往不关心是否是同一块内存地址,我们关心的是两个对象的数据是否相同,所以官方建议:所有的Object子类,都应该重新覆盖equals方法.
+			   
+public int hashCode():返回一个hashCode值,hashCode值决定了该对象在哈希表中的存储位置.
+
+public String toString():把对象转换为String类型.
+
+      System.out.println(对象);等价于 System.out.println(对象.toString());
+      官方建议:我们应该覆盖toString方法,返回该对象的信息,方便我们观察.
+
 Object类,是所有类的根类(老祖宗).
 
 ---------------------------------------------------
