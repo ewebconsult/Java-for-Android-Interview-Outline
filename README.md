@@ -1,6 +1,24 @@
 # Java for Android
 android-Required Interview Outline 欢迎Star，follow
 
+Object类,是所有类的根类(老祖宗).
+
+---------------------------------------------------
+一个类的直接父类或者间接父类都是Obeject类.
+class Employee {}  等价于  class Employee extends Object{}
+
+-----------------------
+class User{}
+class Student extends User{}
+
+此时,Student的间接父类也是Object.
+
+----------------------------------------------------
+Object类到底表示什么意思?
+  Object表示对象的意思,Object类就是对象的封装体,Object可以表示所有对象.
+  所有对象,包括数组都实现了Object类中的方法.
+
+
 隐藏,遮蔽,把之前的给挡住了.
  隐藏有三种情况:
  
